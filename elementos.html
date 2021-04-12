@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Casa do Nemo</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Utilizada a framework bootstrap (https://getbootstrap.com/)-->
+  <!-- 
+    Design responsivo recorrendo ao Grid system (https://getbootstrap.com/docs/4.0/layout/grid/)
+    e flex (https://getbootstrap.com/docs/4.4/utilities/flex/)
+  -->
+
+  <!-- Header -->
+  <header id="header" class="d-flex align-items-center">
+      <!-- 
+      A utilização do componente container é extremamente importante 
+      para a criação dos layouts e tornar as páginas responsivas,
+      deve ser sempre utilizado em todas as sections:
+      1º permite definir todas as margens da página
+      2º define automáticamente a lagura das páginas (width)
+    -->
+    <!--
+      O flex permite gerir o layout, alinhamento e dimensionamento das colunas e componentes.
+      A classe d-flex permite termos uma flexbox e alinhar os itens na posição desejada, como
+      neste caso ao centro.
+    -->
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html">
+        <img
+          src="assets/img/logo.png"
+          class="logo"
+          alt=""
+      /></a>
+
+      <!-- 
+        As navbars no bootstrap são responsivas por default
+      -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#home">Home</a></li>
+          <li class="dropdown"><a href="#servicos"><span>Serviços</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="index.html#aguasalgada">Água Salgada</a></li>
+              <li><a href="index.html#aguadoce">Água Doce</a></li>
+              <li><a href="index.html#marisqueiras">Marisqueiras</a></li>
+              <li><a href="index.html#terrarios">Terrários</a></li>
+              <li><a href="index.html#lagos">Lagos</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfólio</a></li>
+          <li><a class="nav-link scrollto" href="index.html#encomendar">Encomendar</a></li>
+          <li><a class="nav-link scrollto" href="index.html#sobrenos">Sobre nós</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contactos">Contactos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main" data-aos="fade-up">
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Elementos Auxiliares</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li>Elementos Auxiliares</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento escumadores -->
+    <section id="escumadores" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Escumadores</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da image -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/escumadores.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>Os escumadores removem da água do aquário diversas substâncias orgânicas (escumalha proveniente dos restos de alimentação, excreções e outras matérias em decomposição) através de um processo que mistura a água salgada com bolhas de ar. 
+              As bolhas de ar atraem a matéria orgânica que se fixa nas mesmas por acção electrostática. A espuma resultante impregnada de matéria orgânica é direccionada para o copo superior.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento matérias filtrantes -->
+    <section id="filtrantes" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Matérias filtrantes</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/filtros.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>A filtragem mecânica consiste em coar ou peneirar, através de uma matéria filtrante específica, todas as partículas sólidas existentes na água. 
+              Nos filtros são utilizados para o efeito diversos tipos de materiais como: espumas; telas de retenção; lã de vidro; geotexteis; etc.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento bioballs -->
+    <section id="bioballs" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Bioballs</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/bioballs.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>Bioballs são peças de plástico que são usadas para criar filtros do tipo seco-húmido. O seu desenho peculiar oferece uma superfície de contacto óptima para a colonização de bactérias que fazem a filtragem biológica. 
+              As bioballs não devem ficar submersas na água, em vez disso, devem ser constantemente gotejadas para que as bactérias nitrificantes tenham mais oxigénio disponível para se reproduzirem.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento rocha viva -->
+    <section id="rochaviva" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Rocha viva</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/rochaviva.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>Rocha viva é a designação dada a rochas formadas principalmente por carbonato de cálcio, algas calcárias, esqueletos de corais, entre outros organismos calcários. 
+              Estas rochas possuem grande porosidade abrigando no seu interior enormes quantidades de bactérias que possuem um papel crucial na filtragem da água. 
+              É graças á acção destas bactérias - aeróbicas e anaeróbicas - que se efectua a filtragem biológica da água. O acumular de detritos e restos orgânicos no aquário leva ao aparecimento de amoníaco (altamente tóxico) que é degradado pelas bactérias aeróbicas em nitrito (ainda muito tóxico) por sua vez degradado em nitrato (menos tóxico) e por último em nitrogénio gasoso pelas bactérias anaeróbicas. 
+              O nitrogénio gasoso é depois facilmente libertado para a atmosfera através da circulação da água. O uso destas rochas em aquários marinhos é importante a vários níveis: fonte biológica (depuração da água); fonte de alimento (promove o crescimento de diversas algas) e fonte ornamental (para a alocação de corais e refúgio de invertebrados).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento aquecedores -->
+    <section id="aquecedores" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Aquecedores com termostato</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/aquecedores.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>São feitos de plástico injectado, borracha e vidro. Tem uma espessura capaz de resistir a impactos e choques térmicos. 
+              Possuem um sistema para desligar automaticamente caso fiquem fora de água.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento refrigeradores -->
+    <section id="refrigeradores" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Refrigeradores</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/refrigeradores.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>Os refrigeradores são usados para fazer descer a temperatura da água. São muito utilizados nos aquários de marisco vivo, onde este se mantém em baixas temperaturas (entre os 13º e os 15º C.)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+	
+    <!-- Elemento bombas -->
+    <section id="bombas" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Bombas</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/bombas.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>As bombas de indução magnética são utilizadas em todo o mundo pela sua excepcional qualidade e fiabilidade. 
+              Estas bombas garantem a circulação da água em continuo e são hermeticamente fechadas, energeticamente eficientes, muito silenciosas e duráveis. 
+              Devem ser adequadas à dimensão do aquário. 
+              Para isso devem ser considerados alguns aspectos: Caudal (medido em litros/hora - L/h); Altura de elevação (metros - m); Potência (Watts - w).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento iluminação -->
+    <section id="iluminacao" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Iluminação</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/aquasun.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>Uma iluminação adequada irá fazer toda a diferença na beleza e eficiência dum aquário. 
+              Existem diversos tipos de lâmpadas (fluorescentes, HQI, etc.) com funcionalidades e propósitos diferentes (crescimento das plantas, luz marinha, etc).</p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elemento filtragem -->
+    <section id="filtragem" class="">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Filtragem</h2>
+        </div>
+
+        <div class="row">
+          <!--
+            2 colunas em que a coluna da descrição é maior
+          -->
+          <!-- Coluna da imagem -->
+          <div class="col-4 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/elementos/filtros.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna da descrição -->
+          <div class="col-8 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>O sistema de filtragem tem um papel fundamental na manutenção do equilíbrio do aquário e consequentemente na saúde das plantas e peixes. Um bom sistema de filtragem é aquele que é bem dimensionado, não entope com facilidade, retém o maior número de partículas sólidas, realisa com eficácia a filtragem biológica e oferece uma baixa manutenção.</p>
+              <p>No mercado, podemos encontrar variados modelos que se adaptam aos diferentes tipos de aquários. No entanto, um sistema feito por medida é sempre uma mais valia, pois permite um dimensionamento eficaz com melhor aproveitamento do espaço, a inclusão de um variado conjunto de matérias filtrantes, um fácil acesso aos componentes tornando mais fácil a sua manutenção.</p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container py-4">
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

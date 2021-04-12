@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Casa do Nemo</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Utilizada a framework bootstrap (https://getbootstrap.com/)-->
+  <!-- 
+    Design responsivo recorrendo ao Grid system (https://getbootstrap.com/docs/4.0/layout/grid/)
+    e flex (https://getbootstrap.com/docs/4.4/utilities/flex/)
+  -->
+
+  <!-- Header -->
+  <header id="header" class="d-flex align-items-center">
+    <!-- 
+      A utilização do componente container é extremamente importante 
+      para a criação dos layouts e tornar as páginas responsivas,
+      deve ser sempre utilizado em todas as sections:
+      1º permite definir todas as margens da página
+      2º define automáticamente a lagura das páginas (width)
+    -->
+    <!--
+      O flex permite gerir o layout, alinhamento e dimensionamento das colunas e componentes.
+      A classe d-flex permite termos uma flexbox e alinhar os itens na posição desejada, como
+      neste caso ao centro.
+    -->
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html">
+        <img
+          src="assets/img/logo.png"
+          class="logo"
+          alt=""
+      /></a>
+
+      <!-- 
+        As navbars no bootstrap são responsivas por default
+      -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li class="dropdown"><a href="#servicos"><span>Serviços</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#aguasalgada">Água Salgada</a></li>
+              <li><a href="#aguadoce">Água Doce</a></li>
+              <li><a href="#marisqueiras">Marisqueiras</a></li>
+              <li><a href="#terrarios">Terrários</a></li>
+              <li><a href="#lagos">Lagos</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfólio</a></li>
+          <li><a class="nav-link scrollto" href="#encomendar">Encomendar</a></li>
+          <li><a class="nav-link scrollto" href="#sobrenos">Sobre nós</a></li>
+          <li><a class="nav-link scrollto" href="#contactos">Contactos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Casa do <span>Nemo</span></h1>
+      <h2>Aquários por medida</h2>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- Orcamento -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-first-title">
+          <h3>Orçamento Na Hora</h3>
+        </div>
+
+        <div class="text-legend row text-center">
+          <p>Insira as medidas pretendidas, em centímetros</p>
+        </div>
+
+        <!--
+          A utilização do sistema de grid é extremamente importante 
+          para termos a responsividade, este recorre à utilização dos
+          containers, rows e columns
+        -->
+        <div class="container-fluid">
+          <div class="row no-gutters">
+            <!-- 
+              Criação de três colunas (comprimentos, largura e altura) 
+              Existem 5 classes na grid:
+                .col- Extra Small < 576px
+                .col-sm- Small >= 576px
+                .col-md- Medium >= 768px
+                .col-lg- Large >= 992px
+                .col-xl- Extra Large >= 1200px
+              Uma linha é composta no máximo por 12 colunas, como queremos 3 
+              num dispositivo médio o valor que pretendemos é 12/3 = 4
+              Assim num dispositivo pequeno (como um telemovel) deixam de 
+              existir as colunas
+            -->
+            <!-- Coluna do comprimento -->
+            <div class="col-md-4">
+              <!-- Linha com altura 100% -->
+              <div class="row h-100">
+                <!-- Legenda -->
+                <div class="adjust-height text-center legend">
+                  <p>Comprimento</p>
+                </div>
+                <!-- Input tamanho -->
+                <div class="adjust-height text-center">
+                  <input type="number" value="0" class="qty" id="comprimento"/>
+                </div>
+              </div>
+            </div>
+            <!-- Coluna da largura -->
+            <div class="col-md-4">
+              <!-- Linha com altura 100% -->
+              <div class="row h-100">
+                <!-- Legenda -->
+                <div class="adjust-height text-center legend">
+                  <p>Largura</p>
+                </div>
+                <!-- Input tamanho -->
+                <div class="adjust-height text-center">
+                  <input type="number" value="0" class="qty" id="largura"/>
+                </div>
+              </div>
+            </div>
+            <!-- Coluna da altura -->
+            <div class="col-md-4">
+              <!-- Linha com altura 100% -->
+              <div class="row h-100">
+                <!-- Legenda -->
+                <div class="adjust-height text-center legend">
+                  <p>Altura</p>
+                </div>
+                <!-- Input tamanho -->
+                <div class="adjust-height text-center">
+                  <input type="number" value="0" class="qty" id="altura"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Linha para indicar a capacidade e erro (caso exista) -->
+        <div class="row text-center capacity legend">
+          <p class="capacity">Capacidade: <span id="total_value">0</span> litros</p>
+          <span id="error"></span>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicos -->
+    <div id="servicos" class="services">
+
+        <div class="section-first-title">
+          <h3>Os Nossos Serviços</h3>
+        </div>
+
+        <!-- Agua Salgada -->
+        <section id="aguasalgada" class="services section-bg">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row mx-md-n5">
+              <!--
+                Na section de cada serviço existem duas colunas, logo 12/2 = 6
+                e neste caso para dispositivos largos
+                Quando em dispositivos mais pequenos primeiro aparece o conteudo 
+                da coluna com a descrição e posteriormente a coluna da galeria por
+                isso quando num dispositivo grande aparece por ordem contrário é 
+                necessário fazer a troca da ordem recorrendo ao order
+              -->
+              <!-- Coluna com a descrição -->
+              <!-- 
+                Em dispositivos grandes primeira coluna é a galeira e em dispositivos 
+                pequenos as imagens passam para ultima usando o order maior no que 
+                aparece primeiramente
+              -->
+              <div class="col-lg-6 order-lg-2 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="section-title">
+                  <div class="divider-wave bg-wave-gradient text-center">
+                    <img
+                      src="assets/img/bubbles.png"
+                      class="w-100 shadow-1-strong rounded mb-4 wave"
+                      alt=""
+                    />
+                  </div>
+
+                  <h3><span>Água Salgada</span></h3>
+                  
+                </div>
+                <div>
+                  <p>Um aquário de água salgada ornamental é um ecossistema marinho tropical com fauna e flora diversificada proveniente de mares quentes.</p>
+                  <p>Para o instalar é necessário atender a vários elementos que promovam um ambiente saudável e natural, desde logo, uma boa filtragem da água. A filtragem mecânica é conseguida essencialmente pelo <a href="elementos.html#escumadores" class="details-link">escumador</a> e outras <a href="elementos.html#filtrantes" class="details-link">matérias filtrantes</a>.</p>
+                  <p>A filtragem biológica fica a cargo das <a href="elementos.html#bioballs" class="details-link">bioballs</a> e da <a href="elementos.html#rochaviva" class="details-link">rocha viva</a>.</p>
+                  <p>A temperatura da água - a rondar os 26º C - é regulada pelos <a href="elementos.html#aquecedores" class="details-link">aquecedores</a> e/ou pelo <a href="elementos.html#refrigeradores" class="details-link">refrigerador</a>.</p>
+                  <p>A circulação da água é garantida pelas <a href="elementos.html#bombas" class="details-link">bombas</a>.</p>
+                  <p>Uma boa <a href="elementos.html#iluminacao" class="details-link">iluminação</a> favorece o crescimento e a saúde dos corais. A manutenção de todo o sistema é fundamental para conseguir os resultados esperados.</p>
+                </div>
+              </div>
+              <!-- Coluna com a galeira -->
+              <!-- 
+                Em dispositivos grandes primeira coluna é a galeira e em dispositivos 
+                pequenos as imagens passam para ultima usando o order menor para que 
+                apareça em último
+              -->
+              <div class="col-lg-6 order-lg-1 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-right" data-aos-delay="100">
+                <!-- Galeria -->
+                <div class="row">
+                  <!-- Duas colunas de imagens -->
+                  <!-- Primeira coluna -->
+                  <div class="col mb-4 mb-lg-0">
+                    <!-- Imagem com altura 100%, arredondada, sombreada e com margin-bottom -->
+                    <img
+                      src="assets/img/servicos/aguasalgada/aguasalgada1.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/aguasalgada/aguasalgada2.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                  <!-- Segunda coluna -->
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/aguasalgada/aguasalgada3.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/aguasalgada/aguasalgada4.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- Galeria -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Agua Doce -->
+        <section id="aguadoce" class="services">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row mx-md-n5">
+              <!-- Coluna com a descrição -->
+              <!-- 
+                Em dispositivos grandes primeira coluna é a descrição por isso não é 
+                necessário alterar a ordem noutros dispositivos
+              -->
+              <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-right" data-aos-delay="100">
+                <div class="section-title">
+
+                  <div class="divider-wave bg-wave-gradient text-center">
+                    <img
+                      src="assets/img/bubbles.png"
+                      class="w-100 shadow-1-strong rounded mb-4 wave"
+                      alt=""
+                    />
+                  </div>
+
+                  <h3><span>Água Doce</span></h3>
+
+                </div>
+                <div>
+                  <p>Os habitats de água doce - como os rios ou lagos - possuem características distintas não só em relação ao pH da água como também á sua temperatura. Cerca de 40% dos peixes existentes na terra vivem nestes ambientes, de água ácida, alcalina ou neutra, podendo ainda ser de água fria ou quente.</p>
+                  <p>Os aquários de água doce quente ou tropical são os ambientes mais populares entre os aquariófilos. Nestes existem espécies muito coloridas e variadas. Necessitam de água entre 22 e 28 graus centígrados.</p>
+                  <p>Os peixes de água fria são mais recomendados para principiantes. Têm uma vida longa e são mais fáceis de tratar. A temperatura da água varia entre 10 e 22 Cº. Para instalar um aquário de água doce, são necessários alguns elementos: 
+                  o <a href="elementos.html#filtragem" class="details-link">sistema de filtragem</a>, as <a href="elementos.html#bombas" class="details-link">bombas de circulação</a>, a <a href="elementos.html#iluminacao" class="details-link">iluminação</a> e o <a href="elementos.html#aquecedores" class="details-link">aquecedor</a> (no caso de se tratar de água quente).</p>
+                </div>
+              </div>
+              <!-- Coluna com a galeira -->
+              <!-- 
+                Em dispositivos grandes primeira coluna é a descrição por isso não é 
+                necessário alterar a ordem noutros dispositivos
+              -->
+              <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-up" data-aos-delay="100">
+                <!-- Galeria -->
+                <div class="row">
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/aguadoce/aguadoce1.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/aguadoce/aguadoce2.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/aguadoce/aguadoce3.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/aguadoce/aguadoce4.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- Galeria -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Marisqueira -->
+        <section id="marisqueiras" class="services section-bg">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row mx-md-n5">
+              <!-- Coluna com a descrição -->
+              <!-- Preciso alterar a ordem em dispositivos pequenos -->
+              <div class="col-lg-6 order-lg-2 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="section-title">
+
+                  <div class="divider-wave bg-wave-gradient text-center">
+                    <img
+                      src="assets/img/bubbles.png"
+                      class="w-100 shadow-1-strong rounded mb-4 wave"
+                      alt=""
+                    />
+                  </div>
+
+                  <h3><span>Marisqueiras</span></h3>
+
+                </div>
+                <div>
+                  <p>Um aquário marisqueira possibilita a permanência  de marisco vivo por longos períodos de tempo.
+                  Este mantém-se saudável e em boas condições desde que se cumpram as regras básicas fundamentais para o bom funcionamento de todo o sistema.</p>
+                  <p>Os principais factores a ter em atenção são a filtragem e a temperatura da água.</p>	
+                  <p>A filtragem divide-se em 2 tipos: Biológica e Mecânica. Ambos são de extrema importância, pois são eles que mantém a água não só saudável em termos biológicos como também com o aspecto límpido e cristalino.</p>
+                  <p>A filtragem mecânica é os conseguida essencialmente pelo <a href="elementos.html" class="details-link">escumador</a> e outras <a href="elementos.html" class="details-link">matérias filtrantes</a>.
+                  A filtragem biológica fica a cargo das <a href="elementos.html" class="details-link">bioballs</a>.</p>
+                  <p>A temperatura é regulada pelo <a href="elementos.html" class="details-link">refrigerador</a>. Esta deve rondar os 15ºC.</p>
+                </div>
+              </div>
+              <!-- Coluna com a galeira -->
+              <!-- Preciso alterar a ordem em dispositivos pequenos -->
+              <div class="col-lg-6 order-lg-1 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-right" data-aos-delay="100">
+                <!-- Galeria -->
+                <div class="row">
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/marisqueira/marisco1.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/marisqueira/marisco2.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/marisqueira/marisco3.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/marisqueira/marisco4.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- Galeria -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Terrario -->
+        <section id="terrarios" class="services">
+          <div class="container" data-aos="fade-up">
+
+            <div class="row mx-md-n5">
+              <!-- Coluna com a descrição -->
+              <!-- Não é preciso alterar a ordem em dispositivos pequenos -->
+              <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-up" data-aos-delay="100">
+                  <div class="section-title">
+                    <div class="divider-wave bg-wave-gradient text-center">
+                      <img
+                        src="assets/img/bubbles.png"
+                        class="w-100 shadow-1-strong rounded mb-4 wave"
+                        alt=""
+                      />
+                    </div>
+
+                    <h3><span>Terrários</span></h3>
+
+                  </div>
+                  <div>
+                    <p>Concebidos em vários formatos e materias tão diversos como o vidro, acrílico, ou madeira. Podendo alojar um leque alargado de animais, 
+                    desde os invertebrados como as aranhas, escorpiões, etc. até pequenos roedores, ou batráquios ou ainda répteis como cobras, lagartos, iguanas entre outros. 
+                    Na elaboração de qualquer terrário são considerados não só os aspectos estéticos mas também outros importantes como por exemplo: Tanque estanque para poder conter água até ao nível das portas.<p>
+                    <p>Fluxo de ventiliação que permite controlar a temperatura e humidade adequada ao seu animal.</p>
+                  </div>
+              </div>
+              <!-- Coluna com a galeira -->
+              <!-- Não é preciso alterar a ordem em dispositivos pequenos -->
+              <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-right" data-aos-delay="100">
+                <div class="row">
+                  <img
+                    src="assets/img/servicos/terrarios/terrario1.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt=""
+                  />
+                </div>
+                <div class="row">
+                  <img
+                    src="assets/img/servicos/terrarios/terrario2.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Lagos -->
+        <section id="lagos" class="services section-bg">
+          <div class="container mx-md-n5" data-aos="fade-up">
+
+            <div class="row">
+              <!-- Coluna com a descrição -->
+              <!-- Preciso alterar a ordem em dispositivos pequenos -->
+              <div class="col-lg-6 order-lg-2 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="section-title">
+
+                  <div class="divider-wave bg-wave-gradient text-center">
+                    <img
+                      src="assets/img/bubbles.png"
+                      class="w-100 shadow-1-strong rounded mb-4 wave"
+                      alt=""
+                    />
+                  </div>
+
+                  <h3><span>Lagos</span></h3>
+
+                </div>
+                <div>
+                  <p>Concebidos em vários formatos e materias tão diversos como o vidro, acrílico, ou madeira. Podendo alojar um leque alargado de animais, desde os invertebrados como as aranhas, escorpiões, etc. 
+                  até pequenos roedores, ou batráquios ou ainda répteis como cobras, lagartos, iguanas entre outros. Na elaboração de qualquer terrário são considerados não só os aspectos estéticos mas também outros importantes como por exemplo: Tanque estanque para poder conter água até ao nível das portas.</p>
+                  <p>Fluxo de ventiliação que permite controlar a temperatura e humidade adequada ao seu animal.</p>
+                </div>
+              </div>
+              <!-- Coluna com a galeira -->
+              <!-- Preciso alterar a ordem em dispositivos pequenos -->
+              <div class="col-lg-6 order-lg-1 pt-4 pt-lg-0 content d-flex flex-column justify-content-center px-md-5" data-aos="fade-right" data-aos-delay="100">
+                <!-- Galeria -->
+                <div class="row">
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/lagos/lago1.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/lagos/lago2.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col mb-4 mb-lg-0">
+                    <img
+                      src="assets/img/servicos/lagos/lago3.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                    <img
+                      src="assets/img/servicos/lagos/lago4.jpg"
+                      class="w-100 shadow-1-strong rounded mb-4"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- Galeria -->
+              </div>
+              
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-first-title">
+          <h3>Portfólio</h3>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <!-- 
+            Portfolio é composto por 3 colunas em dispositivos grandes, 12/3 = 4 
+            e 2 colunas em dispositivos médios 12/2 = 6 e não existe colunas nos dispositivos
+            pequenos 
+          -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/port1.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/port2.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/port3.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/port4.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/port5.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/port6.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/port7.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/port8.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Encomendar -->
+    <section id="encomendar" class="featured-services section-encomendar-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-first-title">
+          <h3>Como Encomendar</h3>
+        </div>
+
+        <div class="row">
+          <!-- 
+            2 colunas que só deixam de aparecer nos dispositivo pequenos
+          -->
+          <!-- Coluna com planeamento -->
+          <div class="col d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="title">
+                <img
+                  src="assets/img/one.png"
+                  class="icon"
+                  alt=""
+                /> &nbsp; &nbsp; Planeamento</h4>
+              </h4>
+              <ul>
+                <li class="description">Entre em contacto com a Casa do Nemo, através de qualquer um dos meios disponíveis em <a href="#contactos">Contactos</a>.</li>
+                <li class="description">Indique as medidas do aquário pretendido (Comprimento; Largura; Altura). Complemente outras informações adicionais ao projecto que pretende.</li>
+                <li class="description">Aguarde uma resposta de confirmação de recepção dos dados e respectivo orçamento.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Coluna com execução -->
+          <div class="col d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <h4 class="title">
+                <img
+                  src="assets/img/two.png"
+                  class="icon"
+                  alt=""
+                /> &nbsp; &nbsp; Execução</h4>
+                <ul>
+                  <li class="description">Para dar inicio a qualquer obra é necessário fazer primeiramente uma adjudicação. O cliente deve transferir 50% do valor total da mesma para o NIB da Casa do Nemo, Lda.</li>
+                  <li class="description">O prazo de entrega da obra varia entre os 8 e os 15 dias. A entrega á feita no Atelier. A entrega ao domicílio deve ser previamente planeada. Os restantes 50% do valor são regularizados no momento da entrega ou finalização da obra.</li>
+                </ul>
+                <div class="text-center">
+                  <p class="description"><b>NIB:</b> 0033 0000 45285304571 05</p>
+                  <p class="description"><b>IBAN:</b> PT50 0033 0000 45285304571 05</p>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sobre nós -->
+    <section id="sobrenos" class="about section-sobre-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-first-title">
+          <h3>Mais Sobre Nós</h3>
+        </div>
+
+        <div class="row">
+          <!-- 
+            2 colunas em dispositivos grandes (12/2 = 6)
+          -->
+          <!-- Coluna com imagem -->
+          <div class="col-lg-6 text-center" data-aos="fade-right" data-aos-delay="100">
+            <img src="assets/img/loja.jpg" class="img-fluid" alt="">
+          </div>
+          <!-- Coluna com descrição -->
+          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <p>A <b>Casa do Nemo</b> é um atelier de aquários, que fabrica e instala aquários por medida em vidro ou acrílico.</p>
+              <p>A empresa procura sempre encontrar as melhores soluções para cada caso em particular.</p>
+              <p>Tem por objectivo trabalhar no sentido de responder a todas as necessidades dos seus clientes, aproveitando o know-how e experiência adquirida neste sector ao longo dos anos.</p>
+              <p>A confiaça nos métodos de trabalho transparentes, e nos preços competitivos, permitem atingir um elevado grau de satisfção.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contactos -->
+    <section id="contactos" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-first-title">
+          <h3>Os Nossos Contactos</h3>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <!-- 
+            3 colunas em dispositivos grandes para os contactos, a 
+            primeira (morada) é maior e as restantes duas tem as 
+            mesmas dimensões. Em dispositivos médios, apenas o email e 
+            o telemóvel ficam em colunas. 
+          -->
+          <!-- Coluna da morada -->
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Morada</h3>
+              <p>Mindelo, Vila do Conde - Porto</p>
+            </div>
+          </div>
+
+          <!-- Coluna do email -->
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email</h3>
+              <p>contact@example.com</p>
+            </div>
+          </div>
+
+          <!-- Coluna do telemovel -->
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Telemóvel</h3>
+              <p>918128044</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Formulário de contactos -->
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+            <form action="forms/mail_handler.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Carregando</div>
+                <div class="error-message"></div>
+                <div class="sent-message">A sua mensagem foi enviada, obrigada!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar mensagem</button></div>
+            </form>
+          </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container py-4">
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Calculos orcamento, contas e avisos são geridos em JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script type="text/javascript">
+    function calculateTotal() {
+
+      var comprimento = $("#comprimento").val()
+      var altura = $("#altura").val()
+      var largura = $("#largura").val()
+      
+      let total = (comprimento * altura * largura) / 1000;
+      if (comprimento < 40 || altura < 30 || largura < 30) {
+        $("#total_value").text(0);
+        /* Aparecer error */
+        $("#error").text("Dados Inválidos. Os valores mínimos são: 40 c x 30 x 30 (C x L x A)");
+      } else if (comprimento < altura) {
+        /* Aparecer error */
+        $("#error").text("Dados Inválidos. O comprimento deve ser superior à altura.");
+      }  else if (altura > 89) {
+        $("#total_value").text(0);
+        /* Aparecer error */
+        $("#error").text("Dados Inválidos. A altura deve ser inferior a 90 cm.");
+      } else {
+        $("#total_value").text(total);
+        /* Limpar erro */
+        $("#error").empty();
+      }
+    }
+
+    (function() {
+        $(".qty").on("change keyup",calculateTotal)
+    })()
+  </script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
